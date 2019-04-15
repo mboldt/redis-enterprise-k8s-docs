@@ -27,6 +27,9 @@ rules:
 - apiGroups: ["policy"]
   resources: ["poddisruptionbudgets"]
   verbs: ["create", "delete", "get"]
+- apiGroups: [""]
+  resources: ["configmaps", "persistentvolumeclaims"]
+  verbs: ["create", "delete", "get" , "update"]
 
 # needed rbac rules for services controller
 - apiGroups: [""]
